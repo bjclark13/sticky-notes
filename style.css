@@ -1,0 +1,29 @@
+.sticky {
+	width: 150px;
+	height: 150px;
+    background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Patrick Hand', cursive;
+    margin: 1rem;
+}
+
+
+main {
+	display: flex;
+}
+
+.column .inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+	height: 100vh;
+	flex: 1;
+    border: 1px dotted #000;
+    text-align: center;
+}
