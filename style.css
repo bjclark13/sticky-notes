@@ -5,8 +5,8 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	text-transform: uppercase;
 	font-weight: bold;
+	letter-spacing: 2px;
 	font-family: 'Patrick Hand', cursive;
 	margin: 1rem;
 }
