@@ -41,7 +41,8 @@
 		addToHere.append(stickyNote);
 
 		// add event listener
-		stickyNote.addEventListener('click', () => {
+		stickyNote.addEventListener('click', (e) => {
+            console.log(e)
 			if (stickyNote.classList.contains('todo')) {
 				// move to doing
 				const addToHere = document.querySelector('#doing > .inner');
@@ -66,7 +67,30 @@
 		});
 
 		stickyNote.addEventListener('dblclick', () => {
+            console.log('dblclick');
 			// move to the left
+			if (stickyNote.classList.contains('todo')) {
+				// can't do anything here
+			}
+			// move to the right
+			else if (stickyNote.classList.contains('doing')) {
+				// move to todo
+				const addToHere = document.querySelector('#todo > .inner');
+				// update the class
+				stickyNote.classList.remove('doing');
+				stickyNote.classList.add('todo');
+				// move the elemnt to the done column
+				addToHere.append(stickyNote);
+			} else if (stickyNote.classList.contains('done')) {
+				// can't do anything else
+				// move to todo
+				const addToHere = document.querySelector('#doing > .inner');
+				// update the class
+				stickyNote.classList.remove('done');
+				stickyNote.classList.add('todo');
+				// move the elemnt to the done column
+				addToHere.append(stickyNote);
+			}
 		});
 
 		console.log(task);
